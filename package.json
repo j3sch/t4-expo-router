@@ -29,9 +29,9 @@
         "lint": "bun x @biomejs/biome lint ./packages ./apps",
         "fix": "bun x @biomejs/biome check --apply-unsafe ./packages ./apps",
         "deps:fix": "manypkg fix",
-        "deps:update": "bun x npm-check-updates -ui -ws",
         "postinstall": "bun ./.github/scripts/env.ts && bun check-deps && bun format",
-        "clean": "git clean -xdf node_modules && rm -f bun.lockb && rm -rf ./apps/next/.next && rm -rf ./apps/next/.tamagui && rm -rf ./apps/next/node_modules && rm -rf ./packages/ui/dist"
+        "deps:update": "bun x npm-check-updates -ui -ws",
+        "generate:theme": "npx tamagui generate-themes ./apps/expo/themes-in.ts ./apps/expo/themes.ts"
     },
     "workspaces": [
         "apps/*",
